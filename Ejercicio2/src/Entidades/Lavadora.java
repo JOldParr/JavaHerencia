@@ -12,40 +12,33 @@ import java.util.Scanner;
  * @author Julian
  */
 public class Lavadora extends Electrodomestico{
-    protected double carga;
+    private int carga;
 
     public Lavadora() {
+        
     }
 
-    public Lavadora(double carga, double precio, String color, char consumoEnergetico, float peso) {
+    public Lavadora(int carga, double precio, String color, char consumoEnergetico, float peso) {
         super(precio, color, consumoEnergetico, peso);
         this.carga = carga;
     }
 
-    public double getCarga() {
+    public int getCarga() {
         return carga;
     }
 
-    public void setCarga(double carga) {
+    public void setCarga(int carga) {
         this.carga = carga;
     }
 
     @Override
-    public void crearElectrodomestico() {
-        Scanner leer = new Scanner(System.in);
-        super.crearElectrodomestico();
-        System.out.println("Indique la carga de la lavadora");
-        this.carga = leer.nextDouble();
-        super.crearElectrodomestico(); //To change body of generated methods, choose Tools | Templates.
+    public String toString() {
+        return "Lavadora{" + super.toString() + ", carga: " + carga + "}"; //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public double precioFinal() {
-        if(this.carga>30d){
-        this.precio = this.precio + 500d;
-        }
-        return super.precioFinal(); //To change body of generated methods, choose Tools | Templates.
-    }
+    
+
+    
     
     
     

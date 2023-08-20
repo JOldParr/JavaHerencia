@@ -7,6 +7,9 @@ package ejercicio2;
 
 import Entidades.Electrodomestico;
 import Entidades.Lavadora;
+import Servicios.ServiciosElectrodomestico;
+import Servicios.ServiciosLavadora;
+import Servicios.ServiciosTelevisor;
 
 /**
  *
@@ -20,9 +23,11 @@ public class main {
     public static void main(String[] args) {
         // TODO code application logic here
         //Electrodomestico e = new Electrodomestico(1500d,"aMARILLO",'Z',30f);
-        Electrodomestico e = new Lavadora();
-        e.crearElectrodomestico();
-        System.out.println(e.toString());
+        ServiciosLavadora se = new ServiciosLavadora();
+        ServiciosTelevisor st = new ServiciosTelevisor();
+        st.crearTelevisor();
+        //se.crearLavadora();
+        
     }
     
 }
